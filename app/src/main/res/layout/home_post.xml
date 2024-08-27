@@ -8,109 +8,128 @@
 
     <ImageView
         android:id="@+id/ivProfilePicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_margin="8dp"
         android:importantForAccessibility="no"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_user_profile_picture" />
+        app:srcCompat="@drawable/av" />
 
     <TextView
         android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/santiago"
+        android:layout_marginStart="12dp"
+        android:text="usuario"
         app:layout_constraintBottom_toBottomOf="@id/ivProfilePicture"
         app:layout_constraintStart_toEndOf="@id/ivProfilePicture"
-        app:layout_constraintTop_toTopOf="@id/ivProfilePicture" />
+        app:layout_constraintTop_toTopOf="@id/ivProfilePicture"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="294dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="¿Qué es Koin? Framework opensource de desarrollo de aplicaciones móviles Android que quiere ganar a Google Dagger Hilt"
+        app:layout_constraintBottom_toTopOf="@id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUsername" />
 
     <ImageButton
         android:id="@+id/ibOptions"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
         android:background="#00FFFFFF"
         android:importantForAccessibility="no"
         android:padding="10dp"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="@id/ivProfilePicture"
-        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/ivProfilePicture"
-        app:srcCompat="@drawable/ic_dots_menu" />
-
-    <ImageButton
-        android:id="@+id/ibSave"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:background="@null"
-        android:importantForAccessibility="no"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@id/llMainOptions"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/llMainOptions"
-        app:srcCompat="@drawable/ic_save" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_dots" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="295dp"
+        android:layout_height="190dp"
         android:importantForAccessibility="no"
         android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/llMainOptions"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivProfilePicture"
-        app:srcCompat="@drawable/img_cat" />
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        app:srcCompat="@drawable/cloud" />
 
     <LinearLayout
         android:id="@+id/llMainOptions"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:divider="@drawable/empty_divider"
-        android:orientation="horizontal"
         android:showDividers="middle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintTop_toBottomOf="@id/imageView2">
 
         <ImageButton
-            android:id="@+id/ibLike"
+            android:id="@+id/ibDialogue"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
             android:background="@null"
             android:importantForAccessibility="no"
             android:scaleType="centerInside"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_like" />
+            app:srcCompat="@drawable/ic_dialogue" />
 
         <ImageButton
-            android:id="@+id/ibComment"
+            android:id="@+id/ibRT"
             android:background="@null"
             android:importantForAccessibility="no"
             android:scaleType="centerInside"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_comment" />
+            app:srcCompat="@drawable/ic_rt" />
+
+        <ImageButton
+            android:id="@+id/ibHeart"
+            android:background="@null"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_heart" />
+
+        <ImageButton
+            android:id="@+id/ibFavoritr"
+            android:background="@null"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_favoritr" />
 
         <ImageButton
             android:id="@+id/ibShare"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_weight="1"
             android:background="@null"
             android:importantForAccessibility="no"
             android:scaleType="centerInside"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_send" />
+            app:srcCompat="@drawable/ic_share" />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
