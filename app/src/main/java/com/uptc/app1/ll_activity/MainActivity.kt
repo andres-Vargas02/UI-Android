@@ -1,11 +1,17 @@
-package com.uptc.app1
+package com.uptc.app1.ll_activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.uptc.app1.R
+import com.uptc.app1.data.Post
+import com.uptc.app1.rv_activity.RecyclerViewActivity
+import com.uptc.app1.utils.showToast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var llPosts: LinearLayout
@@ -56,5 +62,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         llPosts = findViewById(R.id.ll_posts)
+        findViewById<Button>(R.id.btn_rv).setOnClickListener{
+            startActivity(Intent(this,RecyclerViewActivity::class.java))
+        }
     }
 }

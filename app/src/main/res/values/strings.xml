@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">app1</string>
+    <string name="usuario">usuario</string>
+    <string name="rv_activity">RV Activity</string>
 </resources>
